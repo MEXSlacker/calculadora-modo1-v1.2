@@ -12,12 +12,19 @@ import org.w3c.dom.Text;
 public class MainActivity extends AppCompatActivity {
     //atributes
     private TextView campo;
+    //variables para operar
     public double a = 0;
     public double b = 0;
+    //variable que almacena cadena para numeros
     String cadena = "";
+    //muestra resultados anteriores
+    String historial = "";
     boolean bandera = false;
+    //int para un switch, case of, we do an operation.
     int signo = 0;
     @Override
+
+
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
@@ -25,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onResume (){
         super.onResume();
-
+        Toast.makeText(this, "Bienvenido de vuelta", Toast.LENGTH_SHORT).show();
     }
 
 
@@ -168,6 +175,7 @@ public class MainActivity extends AppCompatActivity {
                 temp = a+b;
                 campo.setText(String.valueOf(temp));
                 bandera = false;
+                //historial += String.valueOf(temp); por si se almacena el historial este compita ira guardando esos datos. Estaria mas chido si tuvieramos 2 pantallas/
             break;
             case 2:
                 temp = a-b;
@@ -190,6 +198,9 @@ public class MainActivity extends AppCompatActivity {
                 }
             break;
         }
+        signo = 0;
+        a=0;
+        b=0;
         cadena = "";
     }
 }

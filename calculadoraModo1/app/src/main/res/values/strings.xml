@@ -15,4 +15,13 @@
     <string name="multiplicacion">x</string>
     <string name="division">/</string>
     <string name="enter">=</string>
+    <string name="yX">pot</string>
+    <string name="reciproca">1/x</string>
+    <string name="raizcuadrada">x2</string>
+    <string name="raizEnesima">YsqrtX</string>
+    <string name="log">10xLOG</string>
+    <string name="ln">eX ln</string>
+    <string name="eX">LN</string>
+    <string name="pot10">10X</string>
+    <string name="campo">Hi, how you doin!</string>
 </resources>
